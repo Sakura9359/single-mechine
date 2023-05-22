@@ -1,0 +1,55 @@
+test:
+    name: basic-contract-benchmark
+    description: test benchmark
+    workers:
+      type: local
+      number: 5
+    rounds:
+      - label: AddPolicy
+        description: delete asset benchmark
+        txNumber: 2000
+        rateControl:
+          type: fixed-rate
+          opts:
+            tps: 50
+        workload:
+          module: workload/addPolicy.js
+          arguments:
+            contractId: ABAC
+
+      - label: GetPolicy
+        description: delete asset benchmark
+        txNumber: 2000
+        rateControl:
+          type: fixed-rate
+          opts:
+            tps: 50
+        workload:
+          module: workload/getPolicy.js
+          arguments:
+            contractId: ABAC
+
+      - label: UpdatePolicy
+        description: delete asset benchmark
+        txNumber: 2000
+        rateControl:
+          type: fixed-rate
+          opts:
+            tps: 50
+        workload:
+          module: workload/updatePolicy.js
+          arguments:
+            contractId: ABAC
+
+#monitors:
+#  resource:
+#  - module: docker
+#    options:
+#      interval: 5
+#      containers:
+#      - all
+#    charting:
+#      bar:
+#        metrics: [Memory(avg), CPU%(avg)]
+#      polar:
+#        metrics: [all]

@@ -1,0 +1,2 @@
+Installed chaincodes on peer:
+Package ID: ABAC_1:9c4e6a9813356933a02941c6ce6b83856fc11df671f0637a67481cf7785aacba, Label: ABAC_1
