@@ -11,7 +11,7 @@ do
     sleep 2
     npx caliper launch manager --caliper-workspace ./ --caliper-networkconfig networks/networkConfig.yaml --caliper-benchconfig benchmarks/data.yaml --caliper-flow-only-test --caliper-fabric-gateway-enabled > ./log/data/${i}-${j}.log
     sleep 2
-#    npx caliper launch manager --caliper-workspace ./ --caliper-networkconfig networks/networkConfig.yaml --caliper-benchconfig benchmarks/record.yaml --caliper-flow-only-test --caliper-fabric-gateway-enabled > ./log/record/${i}-${j}.log
+    npx caliper launch manager --caliper-workspace ./ --caliper-networkconfig networks/networkConfig.yaml --caliper-benchconfig benchmarks/record.yaml --caliper-flow-only-test --caliper-fabric-gateway-enabled > ./log/record/${i}-${j}.log
     cd test
     python3 tps.py
     cd ..
