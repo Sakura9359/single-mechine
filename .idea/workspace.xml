@@ -5,47 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0edb87b7-5111-4a94-a009-143ebee9c629" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/100-100.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/100-150.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/100-200.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/100-250.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/100-300.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/100-350.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/100-400.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/100-450.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/100-50.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/100-500:.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/150-100.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/150-150.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/150-200.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/150-250.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/150-300.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/150-350.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/150-400.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/150-450.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/150-50.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/150-500:.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/200:-100.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/200:-150.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/200:-200.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/200:-250.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/200:-300.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/200:-350.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/200:-400.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/200:-450.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/200:-50.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/200:-500:.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/50-100.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/50-150.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/50-200.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/50-250.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/50-300.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/50-350.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/50-400.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/50-450.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/50-50.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caliper-workspace/log/data/50-500:.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +20,10 @@
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/caliper-workspace/test.sh" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/caliper-workspace/networks/networkConfig.yaml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -111,7 +77,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
