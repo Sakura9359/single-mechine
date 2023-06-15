@@ -5,7 +5,7 @@ Hyperledgr Fabric 安装及示例部署
 ## 1.1go相关
 
 1.下载最新版本的go（参考https://golang.google.cn/doc/install ）
-![](images/img.png)
+![](images/1-1.png)
 2.删除旧版本再解压新版本
 
 进入新下载的go压缩包所在目录，sudo执行
@@ -35,7 +35,7 @@ source /etc/profile
 ```
 go env
 ```
-![](images/img_1.png)
+![](images/1-2.png)
 
 ## 1.2 Docker
 
