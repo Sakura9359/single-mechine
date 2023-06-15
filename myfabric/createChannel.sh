@@ -1,5 +1,5 @@
+# 声明变量
 #export PATH=${PWD}/bin:${PWD}:$PATH
-
 export CORE_PEER_TLS_ENABLED=true
 export ORDERER_CA=${PWD}/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 export PEER0_ORG1_CA=${PWD}/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
@@ -55,7 +55,7 @@ setGlobalsForPeer1Org3(){
     export CORE_PEER_ADDRESS=localhost:12051
 
 }
-
+# 创建通道
 createChannel(){
     echo "=========== create channel ============="
     rm -rf ./channel-artifacts/mychannel.block
@@ -66,7 +66,7 @@ createChannel(){
     -f ./channel-artifacts/${CHANNEL_NAME}.tx --outputBlock ./channel-artifacts/${CHANNEL_NAME}.block \
     --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
 }
-
+# 加入通道
 joinChannel(){
     echo "============ join channel ============="
     setGlobalsForPeer0Org1
@@ -87,7 +87,7 @@ joinChannel(){
     setGlobalsForPeer1Org3
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
 }
-
+# 更新锚节点
 updateAnchorPeers(){
     echo "============== update anchor peer ============"
     setGlobalsForPeer0Org1

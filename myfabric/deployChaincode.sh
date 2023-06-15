@@ -1,3 +1,4 @@
+# 声明变量
 #export PATH=${PWD}/bin:${PWD}:$PATH
 export CORE_PEER_TLS_ENABLED=true
 export ORDERER_CA=${PWD}/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
@@ -63,7 +64,7 @@ setGlobalsForPeer1Org3(){
 
 }
 
-
+# 打包链码
 packageChaincode() {
     rm -rf ${CC_NAME}.tar.gz
     setGlobalsForPeer0Org1
@@ -74,6 +75,7 @@ packageChaincode() {
 }
 # packageChaincode
 
+# 安装链码
 installChaincode() {
     setGlobalsForPeer0Org1
     peer lifecycle chaincode install ${CC_NAME}.tar.gz
@@ -102,6 +104,7 @@ installChaincode() {
 
 # installChaincode
 
+# 查询已安装的链码
 queryInstalled() {
     setGlobalsForPeer0Org1
     peer lifecycle chaincode queryinstalled >&log.txt
@@ -113,6 +116,7 @@ queryInstalled() {
 
 # queryInstalled
 
+# 验证链码
 approveForMyOrg1() {
     setGlobalsForPeer0Org1
     # set -x
@@ -190,6 +194,7 @@ checkCommitReadyness() {
 
 # checkCommitReadyness
 
+# 提交链码
 commitChaincodeDefination() {
     setGlobalsForPeer0Org1
     peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com \
@@ -211,6 +216,7 @@ queryCommitted() {
 
 # queryCommitted
 
+# 链码初始化
 chaincodeInvokeInit() {
     setGlobalsForPeer0Org1
     peer chaincode invoke -o localhost:7050 \
@@ -229,27 +235,26 @@ chaincodeInvokeInit() {
 
 # chaincodeInvokeInit
 
-chaincodeInvoke() {
-
-    setGlobalsForPeer0Org1
-    ## Init ledger
-    peer chaincode invoke -o localhost:7050 \
-        --ordererTLSHostnameOverride orderer.example.com \
-        --tls $CORE_PEER_TLS_ENABLED \
-        --cafile $ORDERER_CA \
-        -C $CHANNEL_NAME -n ${CC_NAME} \
-        --peerAddresses localhost:7051 --tlsRootCertFiles $PEER0_ORG1_CA \
-        --peerAddresses localhost:10051 --tlsRootCertFiles $PEER0_ORG2_CA \
-        -c '{"function": "initLedger","Args":[]}'
-
-}
+#chaincodeInvoke() {
+#    setGlobalsForPeer0Org1
+#    ## Init ledger
+#    peer chaincode invoke -o localhost:7050 \
+#        --ordererTLSHostnameOverride orderer.example.com \
+#        --tls $CORE_PEER_TLS_ENABLED \
+#        --cafile $ORDERER_CA \
+#        -C $CHANNEL_NAME -n ${CC_NAME} \
+#        --peerAddresses localhost:7051 --tlsRootCertFiles $PEER0_ORG1_CA \
+#        --peerAddresses localhost:10051 --tlsRootCertFiles $PEER0_ORG2_CA \
+#        -c '{"function": "initLedger","Args":[]}'
+#
+#}
 
 # chaincodeInvoke
 
-chaincodeQuery() {
-    setGlobalsForPeer0Org2
-    peer chaincode query -C $CHANNEL_NAME -n ${CC_NAME} -c '{"function": "queryCar","Args":["CAR0"]}'
-}
+#chaincodeQuery() {
+#    setGlobalsForPeer0Org2
+#    peer chaincode query -C $CHANNEL_NAME -n ${CC_NAME} -c '{"function": "queryCar","Args":["CAR0"]}'
+#}
 
 # chaincodeQuery
 
@@ -272,56 +277,56 @@ lifecycle1(){
     chaincodeInvokeInit
 }
 
-lifecycle2(){
-    CHANNEL_NAME="mychannel"
-    VERSION="1"
-    CC_SRC_PATH="./chaincode/go/point"
-    CC_NAME="point"
-    packageChaincode
-    installChaincode
-    queryInstalled
-    approveForMyOrg1
-    checkCommitReadyness
-    approveForMyOrg2
-    checkCommitReadyness
-    commitChaincodeDefination
-    queryCommitted
-
-}
-
-lifecycle3(){
-    CHANNEL_NAME="mychannel"
-    VERSION="1"
-    CC_SRC_PATH="./chaincode/go/case"
-    CC_NAME="case"
-    packageChaincode
-    installChaincode
-    queryInstalled
-    approveForMyOrg1
-    checkCommitReadyness
-    approveForMyOrg2
-    checkCommitReadyness
-    commitChaincodeDefination
-    queryCommitted
-
-}
-
-lifecycle4(){
-    CHANNEL_NAME="mychannel"
-    VERSION="1"
-    CC_SRC_PATH="./chaincode/go/log"
-    CC_NAME="log"
-    packageChaincode
-    installChaincode
-    queryInstalled
-    approveForMyOrg1
-    checkCommitReadyness
-    approveForMyOrg2
-    checkCommitReadyness
-    commitChaincodeDefination
-    queryCommitted
-
-}
+#lifecycle2(){
+#    CHANNEL_NAME="mychannel"
+#    VERSION="1"
+#    CC_SRC_PATH="./chaincode/go/point"
+#    CC_NAME="point"
+#    packageChaincode
+#    installChaincode
+#    queryInstalled
+#    approveForMyOrg1
+#    checkCommitReadyness
+#    approveForMyOrg2
+#    checkCommitReadyness
+#    commitChaincodeDefination
+#    queryCommitted
+#
+#}
+#
+#lifecycle3(){
+#    CHANNEL_NAME="mychannel"
+#    VERSION="1"
+#    CC_SRC_PATH="./chaincode/go/case"
+#    CC_NAME="case"
+#    packageChaincode
+#    installChaincode
+#    queryInstalled
+#    approveForMyOrg1
+#    checkCommitReadyness
+#    approveForMyOrg2
+#    checkCommitReadyness
+#    commitChaincodeDefination
+#    queryCommitted
+#
+#}
+#
+#lifecycle4(){
+#    CHANNEL_NAME="mychannel"
+#    VERSION="1"
+#    CC_SRC_PATH="./chaincode/go/log"
+#    CC_NAME="log"
+#    packageChaincode
+#    installChaincode
+#    queryInstalled
+#    approveForMyOrg1
+#    checkCommitReadyness
+#    approveForMyOrg2
+#    checkCommitReadyness
+#    commitChaincodeDefination
+#    queryCommitted
+#
+#}
 
 lifecycle1
 

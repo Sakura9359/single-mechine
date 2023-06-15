@@ -7,7 +7,7 @@ rm -rf ./channel-artifacts/*
 
 #Generate Crypto artifactes for organizations
 cryptogen generate --config=./crypto-config.yaml --output=./crypto-config/
-./ccp-generate.sh
+./ccp-generate.sh         # 生成ccp文件，与caliper链接
 
 # System channel
 SYS_CHANNEL="system-channel"

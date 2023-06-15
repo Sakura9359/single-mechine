@@ -4,10 +4,8 @@ Hyperledgr Fabric 安装及示例部署
 
 ## 1.1go相关
 
-1.下载最新版本的go（参考https://golang.google.cn/doc/install）
-
-![1684752132502](C:\Users\19209\AppData\Roaming\Typora\typora-user-images\1684752132502.png)
-
+1.下载最新版本的go（参考https://golang.google.cn/doc/install ）
+![](images/img.png)
 2.删除旧版本再解压新版本
 
 进入新下载的go压缩包所在目录，sudo执行
@@ -37,8 +35,7 @@ source /etc/profile
 ```
 go env
 ```
-
-![1684753080330](C:\Users\19209\AppData\Roaming\Typora\typora-user-images\1684753080330.png)
+![](images/img_1.png)
 
 ## 1.2 Docker
 
@@ -55,6 +52,7 @@ sudo apt-get upgrade
 sudo apt-get install docker
 sudo apt-get install docker-compose
 ```
+或者运行本仓库docker.sh脚本
 
 3.修改docker镜像仓库配置
 
@@ -114,10 +112,9 @@ docker version
 
 ## 1.安装Hyperledger Fabric
 
- 1.访问github下载bootstrap.sh，修改版本号
+1.下载本仓库bootstrap.sh脚本
 
-[fabric/bootstrap.sh at main · hyperledger/fabric · GitHub](https://github.com/hyperledger/fabric/blob/main/scripts/bootstrap.sh) 
-
+推荐版本号：
 ```
 VERSION=2.2.3        #fabric版本
 CA_VERSION=1.5.0     #fabric-ca版本
@@ -153,14 +150,14 @@ git clone https://github.com/hyperledger/fabric-samples
 
 3.把二进制文件复制到/usr/local/bin
 
-如果脚本下载则二进制文件路径为/fabric-samples/bin
+如果使用脚本下载则二进制文件存储路径为./fabric-samples/bin
 
 ## 2.使用Fabric的测试网络
 
 参考 [使用Fabric的测试网络 — hyperledger-fabricdocs master 文档](https://hyperledger-fabric.readthedocs.io/zh_CN/release-2.2/test_network.html) 
 
-
-
+# 3.使用本仓库的Fabric网络并测试性能
+## 3.1 
 
 
 

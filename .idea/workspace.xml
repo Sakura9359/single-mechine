@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0edb87b7-5111-4a94-a009-143ebee9c629" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfabric/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/myfabric/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfabric/c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfabric/create-artifacts.sh" beforeDir="false" afterPath="$PROJECT_DIR$/myfabric/create-artifacts.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfabric/createChannel.sh" beforeDir="false" afterPath="$PROJECT_DIR$/myfabric/createChannel.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfabric/deployChaincode.sh" beforeDir="false" afterPath="$PROJECT_DIR$/myfabric/deployChaincode.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfabric/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/myfabric/start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +53,11 @@
     <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="ssh.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
